@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-import { Container, Box, About, Title } from './styles';
+import { Row, Box, About, Title } from './styles';
 
 const FeaturedBooks = () => (
   <Fragment>
     <Title>Featured Books</Title>
-    <Container>
+    <Row>
       <Box href="#" firstColor="#BCB0FE" secondColor="#E0DCFF">
         <img src="http://demo.cmssuperheroes.com/themeforest/bookjunky/wp-content/uploads/the_world.jpg" alt="The World od Abstract Art" />
         <About>
@@ -36,7 +36,7 @@ const FeaturedBooks = () => (
         </About>
       </Box>
       
-    </Container>
+    </Row>
   </Fragment>
 );
 

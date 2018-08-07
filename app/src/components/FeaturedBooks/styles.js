@@ -6,9 +6,10 @@ export const Title = styled.h1`
   margin-bottom: 30px;
 `;
 
-export const Container = styled.div`
+export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 `;
 
 export const Box = styled.a`
@@ -20,7 +21,7 @@ export const Box = styled.a`
   width: 400px;
   height: auto;
   transition: all 0.3s;
-  margin: 0 0 20px 20px;
+  margin: 0 20px 20px 0;
 
   &:hover {
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.2);
