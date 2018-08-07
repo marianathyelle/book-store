@@ -16,6 +16,13 @@ export const Item = styled(Link)`
   display: flex;
   margin: 0 30px 30px 0;
   color: #000;
+  padding: 20px;
+  transition: all 0.3s;
+
+  &:hover {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+  }
 
   img {
     margin-right: 10px;
@@ -28,13 +35,13 @@ export const Item = styled(Link)`
     flex-direction: column;
 
     strong {
-      font-size: 12px;
-      margin-bottom: 5px;
+      font-size: 14px;
+      margin-bottom: 3px;
     }
 
     small {
-      font-size: 10px;
-      color: #8e8e8e;
+      font-size: 11px;
+      color: #f06a69;
       margin-bottom: 10px;
     }
 

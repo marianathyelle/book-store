@@ -48,6 +48,7 @@ export const About = styled.div`
 
   strong {
     margin-bottom: 5px;
+    text-shadow: 3px 5px 8px ${props => props.firstColor};
   }
 
   small {
