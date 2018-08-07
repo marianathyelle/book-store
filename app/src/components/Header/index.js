@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, Logo, Nav } from './styles';
 
@@ -7,10 +8,10 @@ const Header = () => (
     <Logo>BookStore</Logo>
     <Nav>
       <li>
-        <a href="">Store</a>
+        <Link to="/">Store</Link>
       </li>
       <li>
-        <a href="">Cart</a>
+        <Link to="">Cart</Link>
       </li>
     </Nav>
   </Container>

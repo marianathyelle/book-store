@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Title = styled.h2`
   font-size: 26px;
@@ -11,7 +12,7 @@ export const Row = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Item = styled.a`
+export const Item = styled(Link)`
   display: flex;
   margin: 0 30px 30px 0;
   color: #000;
