@@ -1,8 +1,20 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { Spinner } from '../../components/Loading/styles';
 
 export const Container = styled.div`
   margin: 0 50px;
   padding: 50px 0;
+
+  ${Spinner} {
+    height: 48px;
+  }
+
+  ${props => props.loading && css`
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  `}
 `;
 
 export const Book = styled.div`
@@ -30,6 +42,11 @@ export const Details = styled.div`
   p {
     font-size: 14px;
     margin-bottom: 30px;
+  }
+
+  strong {
+    color: #44CBD1;
+    margin-bottom: 20px;
   }
 
   input,

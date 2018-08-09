@@ -1,45 +1,58 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
+import PropTypes from 'prop-types';
+
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Creators as BooksActions } from '../../store/ducks/books';
+
+import Loading from '../../components/Loading';
 
 import { Title, Row, Item } from './styles';
 
-const BooksList = () => (
-  <Fragment>
-    <Title>Browse</Title>
-    <Row>
-      <Item to="/book/1">
-        <img src="https://images.gr-assets.com/books/1348097960l/10660230.jpg" alt="Super Mario"/>
-        <div>
-          <strong>Super Mario</strong>
-          <small>Jeff Ryan</small>
-          <span>R$20,00</span>
-        </div>
-      </Item>
-      <Item to="#">
-        <img src="https://images.gr-assets.com/books/1348097960l/10660230.jpg" alt="Super Mario"/>
-        <div>
-          <strong>Super Mario</strong>
-          <small>Jeff Ryan</small>
-          <span>R$20,00</span>
-        </div>
-      </Item>
-      <Item to="#">
-        <img src="https://images.gr-assets.com/books/1348097960l/10660230.jpg" alt="Super Mario"/>
-        <div>
-          <strong>Super Mario</strong>
-          <small>Jeff Ryan</small>
-          <span>R$20,00</span>
-        </div>
-      </Item>
-      <Item to="#">
-        <img src="https://images.gr-assets.com/books/1348097960l/10660230.jpg" alt="Super Mario"/>
-        <div>
-          <strong>Super Mario</strong>
-          <small>Jeff Ryan</small>
-          <span>R$20,00</span>
-        </div>
-      </Item>
-    </Row>
-  </Fragment>  
-)
+class BooksList extends Component {
+  static propTypes = {
+    getBookRequest: PropTypes.func.isRequired,
+    books: PropTypes.shape({
+      data: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.title,
+        thumbnail: PropTypes.string,
+        author: PropTypes.string,
+        price: PropTypes.string,
+      })),
+      loading: PropTypes.bool,
+    }).isRequired
+  }
 
-export default BooksList;
+  componentDidMount() {
+    this.props.getBookRequest();
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <Title>Browse {this.props.books.loading && <Loading/>}</Title>
+        <Row>
+          {this.props.books.data.map(book => (
+            <Item to={`/book/${book.id}`} key={book.id}>
+              <img src={book.thumbnail} alt={book.title}/>
+              <div>
+                <strong>{book.title}</strong>
+                <small>by {book.author}</small>
+                <span>R${book.price}</span>
+              </div>
+            </Item>
+          ))}
+        </Row>
+      </Fragment>  
+    )
+  }
+};
+
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators(BooksActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

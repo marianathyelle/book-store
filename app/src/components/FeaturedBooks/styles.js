@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Title = styled.h1`
   font-size: 26px;
@@ -12,13 +13,13 @@ export const Row = styled.div`
   margin-bottom: 50px;
 `;
 
-export const Box = styled.a`
+export const Box = styled(Link)`
   padding: 20px;
-  background: linear-gradient(to top, ${props => props.firstColor} 0%, ${props => props.secondColor} 100%);
+  background: linear-gradient(to top, ${props => props.primarycolor} 0%, ${props => props.secondarycolor} 100%);
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
-  width: 400px;
+  width: 420px;
   height: auto;
   transition: all 0.3s;
   margin: 0 20px 20px 0;
@@ -30,7 +31,7 @@ export const Box = styled.a`
   img {
     width: 100px;
     height: 152px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-right: 10px;
   }
 `;
@@ -48,7 +49,7 @@ export const About = styled.div`
 
   strong {
     margin-bottom: 5px;
-    text-shadow: 3px 5px 8px ${props => props.firstColor};
+    text-shadow: 3px 5px 8px ${props => props.primarycolor};
   }
 
   small {
@@ -58,9 +59,10 @@ export const About = styled.div`
   }
 
   p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     margin-bottom: 15px;
+    text-shadow: 3px 5px 10px ${props => props.primarycolor};
   }
 
   span {

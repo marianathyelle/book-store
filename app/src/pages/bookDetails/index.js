@@ -1,22 +1,81 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Creators as BookDetailsActions } from '../../store/ducks/bookDetails';
+
+import Loading from '../../components/Loading';
 
 import { Container, Book, Details } from './styles';
 
-const BookDetails = () => (
-  <Container>
-    <Book>
-      <img src="https://images.gr-assets.com/books/1348097960l/10660230.jpg" alt="Super Mario"/>
-      <Details>
-        <h1>Super Mario</h1>
-        <small>by Jeff Ryan</small>
-        <p>Super Mario tells the story behind the Nintendo games millions of us grew up with, explaining how a Japanese trading card company rose to dominate the fiercely competitive video-game industry.</p>
-        <div>
-          <input type="number" placeholder="Quantity"/>
-          <button>Add to cart</button>
-        </div>
-      </Details>
-    </Book>
-  </Container>
-);
 
-export default BookDetails;
+class BookDetails extends Component {
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        id: PropTypes.number,
+      }),
+    }).isRequired,
+    getBookDetailsRequest: PropTypes.func.isRequired,
+    book: PropTypes.shape({
+      data: PropTypes.shape({
+        thumbnail: PropTypes.string,
+        title: PropTypes.title,
+        author: PropTypes.string,
+        description: PropTypes.string,
+        price: PropTypes.string,
+      }),
+      loading: PropTypes.bool,
+    }).isRequired
+  }
+
+  componentDidMount() {
+    this.loadBookDetails();
+  }
+
+  loadBookDetails = () => {
+    const { id } = this.props.match.params;
+
+    this.props.getBookDetailsRequest(id);
+  }
+
+  renderDetails = () => {
+    const book = this.props.book.data;
+    return (
+      <Container>
+        <Book>
+          <img src={book.thumbnail} alt={book.title}/>
+          <Details>
+            <h1>{book.title}</h1>
+            <small>by {book.author}</small>
+            <p>{book.description}</p>
+            <strong>R$ {book.price}</strong>
+            <div>
+              <input type="number" placeholder="Quantity"/>
+              <button>Add to cart</button>
+            </div>
+          </Details>
+        </Book>
+      </Container>
+    )
+  }
+
+  render() {
+    return this.props.book.loading ? (
+      <Container loading> 
+        <Loading/>
+      </Container>
+    ) : (
+      this.renderDetails()
+    );
+  }
+};
+
+const mapStateToProps = state => ({
+  book: state.bookDetails,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators(BookDetailsActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookDetails);

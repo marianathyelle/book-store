@@ -5,10 +5,12 @@ import { BrowserRouter } from 'react-router-dom';
 import './styles/global';
 
 import Header from './components/Header';
+
 import Routes from './routes';
+import store from './store';
 
 const App = () => (
-  <Provider>
+  <Provider store={store}>
     <BrowserRouter>
       <Fragment>
         <Header/>

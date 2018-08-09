@@ -1,0 +1,93 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Super Mario",
+      "author": "Jeff Ryan",
+      "description": "Super Mario tells the story behind the Nintendo games millions of us grew up with, explaining how a Japanese trading card company rose to dominate the fiercely competitive video-game industry.",
+      "thumbnail": "https://images.gr-assets.com/books/1348097960l/10660230.jpg",
+      "price": "45,00"
+    },
+    {
+      "id": 2,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "description": "A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51SzKEe5fqL._SX331_BO1,204,203,200_.jpg",
+      "price": "40,00"
+    },
+    {
+      "id": 3,
+      "title": "Invisible Man",
+      "author": "Ralph Ellison",
+      "description": "A first novel by an unknown writer, it remained on the bestseller list for sixteen weeks, won the National Book Award for fiction, and established Ralph Ellison as one of the key writers of the century.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51NIZqFLvJL._SX322_BO1,204,203,200_.jpg",
+      "price": "20,00"
+    },
+    {
+      "id": 4,
+      "title": "Portnoy's Complaint",
+      "author": "Philip Roth",
+      "description": "A disorder in which strongly-felt ethical and altruistic impulses are perpetually warring with extreme sexual longings, often of a perverse nature.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/41Wq4EaKpHL._SX323_BO1,204,203,200_.jpg",
+      "price": "20,00"
+    },
+    {
+      "id": 5,
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "description": "The Diary of a Young Girl is the record of two years in the life of a remarkable Jewish girl whose triumphant humanity in the face of unfathomable deprivation and fear has made the book one of the most enduring documents of our time.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51EPqZ9kFnL._SX309_BO1,204,203,200_.jpg",
+      "featured": true,
+      "primaryColor": "#413829",
+      "secondaryColor": "#AD9F92",
+      "price": "40,00"
+    },
+    {
+      "id": 6,
+      "title": "The Fault in Our Stars",
+      "author": "John Green",
+      "description": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis... ",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51ED6WxFy8L._SX335_BO1,204,203,200_.jpg",
+      "featured": true,
+      "primaryColor": "#00ACEC",
+      "secondaryColor": "#bce5f4",
+      "price": "35,00"
+    },
+    {
+      "id": 7,
+      "title": "The House at Pooh Corner",
+      "author": "A. A. Milne",
+      "description": "Return to the Hundred Acre Wood in A.A. Milne’s second collection of Pooh stories, The House at Pooh Corner.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51jGTAuw%2BWL._SX325_BO1,204,203,200_.jpg",
+      "price": "30,00"
+    },
+    {
+      "id": 8,
+      "title": "Valley of the Dolls",
+      "author": "Jacqueline Susann",
+      "description": "Dolls: red or black; capsules or tablets; washed down with vodka or swallowed straight—for Anne, Neely, and Jennifer, it doesn’t matter, as long as the pill bottle is within easy reach.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/41vVA3MS2fL._SX333_BO1,204,203,200_.jpg",
+      "featured": true,
+      "primaryColor": "#FBAAB5",
+      "secondaryColor": "#FFD0D2",
+      "price": "20,00"
+    },
+    {
+      "id": 9,
+      "title": "Where the Sidewalk Ends",
+      "author": "Shel Silverstein",
+      "description": "You'll meet a boy who turns into a TV set, and a girl who eats a whale. The Unicorn and the Bloath live there, and so does Sarah Cynthia Sylvia Stout who will not take the garbage out.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51s-bKYYP-L._SX388_BO1,204,203,200_.jpg",
+      "price": "26,00"
+    },
+    {
+      "id": 10,
+      "title": "Things Fall Apart",
+      "author": "Chinua Achebe",
+      "description": "A true classic of world literature . . . A masterpiece that has inspired generations of writers in Nigeria, across Africa, and around the world.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61l%2BVmohEOL._SX322_BO1,204,203,200_.jpg",
+      "price": "10,00"
+    }
+  ]
+}

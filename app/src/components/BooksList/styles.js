@@ -14,10 +14,11 @@ export const Row = styled.div`
 
 export const Item = styled(Link)`
   display: flex;
-  margin: 0 30px 30px 0;
+  margin: 0 30px 40px 0;
   color: #000;
-  padding: 20px;
+  padding: 10px;
   transition: all 0.3s;
+  width: 300px;
 
   &:hover {
     border-radius: 5px;
