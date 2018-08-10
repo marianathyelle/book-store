@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Creators as BookDetailsActions } from '../../store/ducks/bookDetails';
 
+import AddToCart from '../../components/AddToCart';
 import Loading from '../../components/Loading';
 
 import { Container, Book, Details } from './styles';
@@ -14,7 +15,7 @@ class BookDetails extends Component {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
-        id: PropTypes.number,
+        id: PropTypes.string,
       }),
     }).isRequired,
     getBookDetailsRequest: PropTypes.func.isRequired,
@@ -50,11 +51,10 @@ class BookDetails extends Component {
             <h1>{book.title}</h1>
             <small>by {book.author}</small>
             <p>{book.description}</p>
-            <strong>R$ {book.price}</strong>
-            <div>
-              <input type="number" placeholder="Quantity"/>
-              <button>Add to cart</button>
-            </div>
+            <AddToCart 
+              id={book.id}
+              price={book.price} 
+            />
           </Details>
         </Book>
       </Container>
