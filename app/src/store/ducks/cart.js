@@ -1,12 +1,11 @@
 export const Types = {
   GET_REQUEST: 'cart/GET_REQUEST',
   GET_SUCCESS: 'cart/GET_SUCCESS',
+  REMOVE_ITEM: 'cart/REMOVE_ITEM',
 };
 
 const INITIAL_STATE = {
   data: [],
-  loading: false,
-  total: 0,
   showMessage: false,
 };
 
@@ -19,6 +18,11 @@ export default function cart(state = INITIAL_STATE, action) {
         ...state, 
         data: [ ...state.data, action.payload.data ], 
         showMessage: false,
+      }
+      case Types.REMOVE_ITEM: {
+        state.data.splice(action.payload.index, 1);
+
+        return { ...state, data: [ ...state.data ] }
       }
     default:
       return state;
@@ -34,5 +38,10 @@ export const Creators = {
   addBook: data => ({
     type: Types.GET_SUCCESS,
     payload: { data }
+  }),
+
+  removeBook: index => ({
+    type: Types.REMOVE_ITEM,
+    payload: { index }
   }),
 };

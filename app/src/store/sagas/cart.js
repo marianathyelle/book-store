@@ -10,6 +10,8 @@ export function* addBookToCart(action) {
     const subtotal = action.payload.qtd * data.price;
 
     const bookData = {
+      id: data.id,
+      thumbnail: data.thumbnail,
       title: data.title,
       price: data.price,
       qtd: action.payload.qtd,

@@ -36,4 +36,14 @@ export const Nav = styled.ul`
       color: #F06A69;
     }
   }
+
+  span {
+    font-size: 11px;
+    background-color: #F06A69;
+    color: #FFF;
+    border-radius: 50px;
+    padding: 5px;
+    position: relative;
+    left: 5px; 
+  }
 `;

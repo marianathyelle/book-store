@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 30px 30px 0;
+  margin: 0 0 30px 0;
 `;
 
 export const Item = styled.div`
@@ -30,10 +30,8 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
 
-  small {
-    font-size: 11px;
+  strong {
     margin-bottom: 10px;
-    color: #f06a69;
   }
 
   div {
@@ -72,4 +70,9 @@ export const Calculate = styled.div`
       background-color: #44CBD1;
     }
   }
+`;
+
+export const ShowDetails = styled.span`
+  font-weight: 700;
+  color: #F06A69;
 `;
