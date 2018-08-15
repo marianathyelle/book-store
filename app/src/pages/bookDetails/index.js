@@ -53,7 +53,7 @@ class BookDetails extends Component {
             <p>{book.description}</p>
             <AddToCart 
               id={book.id}
-              price={book.price} 
+              price={parseFloat(book.price).toFixed(2)} 
             />
           </Details>
         </Book>

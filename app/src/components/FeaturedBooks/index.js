@@ -48,7 +48,7 @@ class FeaturedBooks extends Component {
                 <strong>{book.title}</strong>
                 <small>by {book.author}</small>
                 <p>{book.description}</p>
-                <span>R${book.price}</span>
+                <span>R$ {parseFloat(book.price).toFixed(2)}</span>
               </About>
             </Box> 
           ))} 

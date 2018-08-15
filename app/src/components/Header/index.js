@@ -8,7 +8,7 @@ import { Container, Logo, Nav } from './styles';
 
 const Header = ({ cart }) => (
   <Container>
-    <Logo>BookStore</Logo>
+    <Logo to="/">BookStore</Logo>
     <Nav>
       <li>
         <Link to="/">Store</Link>

@@ -39,7 +39,7 @@ class BooksList extends Component {
               <div>
                 <strong>{book.title}</strong>
                 <small>by {book.author}</small>
-                <span>R${book.price}</span>
+                <span>R${parseFloat(book.price).toFixed(2)}</span>
               </div>
             </Item>
           ))}

@@ -6,7 +6,7 @@
       "author": "Jeff Ryan",
       "description": "Super Mario tells the story behind the Nintendo games millions of us grew up with, explaining how a Japanese trading card company rose to dominate the fiercely competitive video-game industry.",
       "thumbnail": "https://images.gr-assets.com/books/1348097960l/10660230.jpg",
-      "price": "25.90"
+      "price": "25.9"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "author": "Frank Herbert",
       "description": "A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.",
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51SzKEe5fqL._SX331_BO1,204,203,200_.jpg",
-      "price": "40.00"
+      "price": "40"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "author": "Ralph Ellison",
       "description": "A first novel by an unknown writer, it remained on the bestseller list for sixteen weeks, won the National Book Award for fiction, and established Ralph Ellison as one of the key writers of the century.",
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51NIZqFLvJL._SX322_BO1,204,203,200_.jpg",
-      "price": "20.00"
+      "price": "20"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "author": "Philip Roth",
       "description": "A disorder in which strongly-felt ethical and altruistic impulses are perpetually warring with extreme sexual longings, often of a perverse nature.",
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/41Wq4EaKpHL._SX323_BO1,204,203,200_.jpg",
-      "price": "20.00"
+      "price": "20"
     },
     {
       "id": 5,
@@ -41,7 +41,7 @@
       "featured": true,
       "primaryColor": "#413829",
       "secondaryColor": "#AD9F92",
-      "price": "40.00"
+      "price": "40"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "featured": true,
       "primaryColor": "#00ACEC",
       "secondaryColor": "#bce5f4",
-      "price": "35.50"
+      "price": "35.5"
     },
     {
       "id": 7,
@@ -60,7 +60,7 @@
       "author": "A. A. Milne",
       "description": "Return to the Hundred Acre Wood in A.A. Milne’s second collection of Pooh stories, The House at Pooh Corner.",
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51jGTAuw%2BWL._SX325_BO1,204,203,200_.jpg",
-      "price": "31.00"
+      "price": "31"
     },
     {
       "id": 8,
@@ -71,7 +71,7 @@
       "featured": true,
       "primaryColor": "#FBAAB5",
       "secondaryColor": "#FFD0D2",
-      "price": "22.00"
+      "price": "22"
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "author": "Shel Silverstein",
       "description": "You'll meet a boy who turns into a TV set, and a girl who eats a whale. The Unicorn and the Bloath live there, and so does Sarah Cynthia Sylvia Stout who will not take the garbage out.",
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51s-bKYYP-L._SX388_BO1,204,203,200_.jpg",
-      "price": "26.00"
+      "price": "26"
     },
     {
       "id": 10,
@@ -87,7 +87,7 @@
       "author": "Chinua Achebe",
       "description": "A true classic of world literature . . . A masterpiece that has inspired generations of writers in Nigeria, across Africa, and around the world.",
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61l%2BVmohEOL._SX322_BO1,204,203,200_.jpg",
-      "price": "10.00"
+      "price": "10"
     }
   ]
 }

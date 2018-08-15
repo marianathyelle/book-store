@@ -29,6 +29,7 @@ export const Item = styled.div`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 
   strong {
     margin-bottom: 10px;
@@ -62,6 +63,7 @@ export const Calculate = styled.div`
     text-transform: uppercase;
     border-color: #44CBD1;
     transition: all 0.3s;
+    margin-top: 20px;
 
     &:hover,
     &:active,
@@ -75,4 +77,17 @@ export const Calculate = styled.div`
 export const ShowDetails = styled.span`
   font-weight: 700;
   color: #F06A69;
+`;
+
+export const Delete = styled.button`
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: -20px;
+
+  img {
+    height: 15px;
+    width: 15px;
+    margin: 0;
+  }
 `;

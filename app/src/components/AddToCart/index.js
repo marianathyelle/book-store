@@ -13,7 +13,7 @@ class AddToCart extends Component {
     initialSubtotal: PropTypes.func.isRequired,
     getBookSubtotalRequest: PropTypes.func.isRequired,
     getBooks: PropTypes.func.isRequired,
-    subtotal: PropTypes.number,
+    subtotal: PropTypes.string,
     price: PropTypes.string,
     id: PropTypes.number,
     cart: PropTypes.shape({

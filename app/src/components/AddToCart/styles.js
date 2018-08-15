@@ -33,6 +33,7 @@ export const SuccessMessage = styled.span`
   font-size: 12px;
   font-weight: 700;
   color: #44CBD1;
+  display: block;
 `;
 
 export const ErrorMessage = styled.span`
@@ -40,4 +41,5 @@ export const ErrorMessage = styled.span`
   font-size: 12px;
   font-weight: 700;
   color: #F06A69;
+  display: block;
 `;

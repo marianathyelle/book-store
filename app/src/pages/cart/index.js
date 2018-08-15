@@ -9,7 +9,8 @@ import { Creators as TotalActions } from '../../store/ducks/total';
 import EmptyCart from '../../components/EmptyCart';
 import Total from '../../components/Total';
 
-import { Container, Row, Item, Info, Calculate, ShowDetails } from './styles';
+import DeleteIcon from '../../assets/images/close.svg';
+import { Container, Row, Item, Info, Calculate, ShowDetails, Delete } from './styles';
 
 class Cart extends Component {
 
@@ -62,10 +63,12 @@ class Cart extends Component {
                   <img src={book.thumbnail} alt={book.title} />
                   <Info>
                     <strong>{book.title}</strong>
-                    <button onClick={() => this.getIndexOfBook(book.id)}>delete</button>
+                    <Delete onClick={() => this.getIndexOfBook(book.id)}>
+                      <img src={DeleteIcon} alt="Delete book"/>
+                    </Delete>
                     <div>
                       <span>Price:</span>
-                      <span>R$ {book.price}</span>
+                      <span>R$ {parseFloat(book.price).toFixed(2)}</span>
                     </div>
                     <div>
                       <span>Quantity:</span>
@@ -73,20 +76,20 @@ class Cart extends Component {
                     </div>
                     <div>
                       <span>Subtotal:</span>
-                      <span>R$ {book.subtotal}</span>
+                      <span>R$ {parseFloat(book.subtotal).toFixed(2)}</span>
                     </div>
                   </Info>
                 </Item>
               ))}
             </Row>
-            <Calculate>
-              <button onClick={this.getValues}>Calculate total</button>
-            </Calculate>
             { !this.props.totalDetails ? (
-              <ShowDetails>Click on calculate button to see your discount</ShowDetails>
+              <ShowDetails>Click on calculate button to calculate your purchase</ShowDetails>
             ) : (
               <Total totalDetails={this.props.totalDetails}/>
             )}
+            <Calculate>
+              <button onClick={this.getValues}>Calculate total</button>
+            </Calculate>
           </Fragment>
         ) }
       </Container>

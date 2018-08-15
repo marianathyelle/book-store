@@ -7,20 +7,20 @@ const Total = ({ totalDetails }) => (
   <div>
     <PurchaseDetails>
       <li>
-        <span>Quantidade de Livros:</span>
+        <span>Books Quantity:</span>
         <span>{totalDetails.quantity}</span>
       </li>
       <li>
-        <span>Valor total dos livros:</span>
-        <span>R$ {totalDetails.price}</span>
+        <span>Books total price:</span>
+        <span>R$ {parseFloat(totalDetails.price).toFixed(2)}</span>
       </li>
       <li>
-        <span>Desconto:</span>
-        <span> - R$ {totalDetails.discount}</span>
+        <span>Discount:</span>
+        <span> - R$ {parseFloat(totalDetails.discount).toFixed(2)}</span>
       </li>
       <li>
         <span>Total:</span>
-        <span>R$ {totalDetails.total}</span>
+        <span>R$ {parseFloat(totalDetails.total).toFixed(2)}</span>
       </li>
     </PurchaseDetails>
   </div>

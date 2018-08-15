@@ -14,10 +14,11 @@ export default function bookSubtotal(state = INITIAL_STATE, action) {
     case Types.GET_REQUEST: {
       const value = action.payload.price;
       const currentValue = value * action.payload.qtd;
+      console.log(value)
 
       if(action.payload.qtd > 0) {
        return {
-         subtotal: currentValue,
+         subtotal: parseFloat(currentValue).toFixed(2),
        }
       }
       
